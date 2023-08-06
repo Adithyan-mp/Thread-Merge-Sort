@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/src/mergesort/Array.java</file>
-            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/src/mergesort/MergeSort.java</file>
-            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/src/mergesort/SortingThread.java</file>
-            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/src/mergesort/MergingThread.java</file>
-            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/src/mergesort/MergeParallelMain.java</file>
+            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/Thread-Merge-Sort/src/mergesort/MergeParallelMain.java</file>
+            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/Thread-Merge-Sort/src/mergesort/MergeSort.java</file>
+            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/Thread-Merge-Sort/src/mergesort/Array.java</file>
+            <file>file:/C:/Users/HELLO/OneDrive/Documents/NetBeansProjects/MergeSort/Thread-Merge-Sort/src/mergesort/SortingThread.java</file>
         </group>
     </open-files>
 </project-private>

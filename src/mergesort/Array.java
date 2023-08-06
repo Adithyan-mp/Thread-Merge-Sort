@@ -22,7 +22,7 @@ import java.util.Scanner;
             int n = num;
             for (int i = s; i < n; ++i){
               System.out.print(arr[i] + " ");
-              if(n%1000==0){
+              if(i%1000==0 && i>1){
                   System.out.println();
               }
             
@@ -37,7 +37,7 @@ import java.util.Scanner;
     }
     
     static int getValue(){
-         Scanner sc =new Scanner(System.in);
+        Scanner sc =new Scanner(System.in);
         System.out.print("Enter the range of number to sort : ");
         int value=sc.nextInt();
         return value;

@@ -14,7 +14,6 @@ public class MergeParallelMain {
         int point=value/num;
         int end; 
         int start=0;
-        System.out.println("num: "+num);
         SortingThread []t=new SortingThread[num];
         MergingThread t2;
         
@@ -52,16 +51,16 @@ public class MergeParallelMain {
         for(int i=0;i<num;i++){
             t[i].join();
         }
-        
-        //create THREAD to merge the sorted array
+        //create THREAD to merge the merge array
         MergingThread []mergeThread;
-        int mergeArray=num/2;
+        int mergeArray=num-1;
         mergeThread=new MergingThread[mergeArray];
         
+        //merging chunkz of sorted sub arrray
         for(int i=0;i<mergeArray;i++){
-            int mid=(startPos[i]+endPos[i+1])/2;
-            System.out.println(mid);
-            mergeThread[i]=new MergingThread(obj,startPos[i],mid,endPos[i+1]);
+            int mid=(startPos[i]+endPos[i])/2;
+//            System.out.println("mid : "+endPos[i]+" start :" +0+" end : "+endPos[i+1]);
+            mergeThread[i]=new MergingThread(obj,0,endPos[i],endPos[i+1]);
             mergeThread[i].start();
         }
         
@@ -69,12 +68,6 @@ public class MergeParallelMain {
         for(int i=0;i<mergeArray;i++){
             mergeThread[i].join();
         }
-        
-        System.out.println("fm : "+startPos[num-1]);
-        // creating finnal merge instance
-        MergingThread finalmerge=new MergingThread(obj,0,startPos[num-1],value);
-        finalmerge.start();
-        finalmerge.join();
         obj.display(value,0);
     }
 }
