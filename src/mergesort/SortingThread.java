@@ -15,14 +15,5 @@ package mergesort;
     public void run(){
              MergeSort obj1=new MergeSort();
             obj1.mergesort(obj.arr, start, end-1);
-    
-
     }  
-//     public int getStart() {
-//        return start;
-//    }
-//
-//    public int getEnd() {
-//        return end;
-//    }
 }

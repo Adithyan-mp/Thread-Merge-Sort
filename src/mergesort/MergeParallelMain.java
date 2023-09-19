@@ -4,7 +4,8 @@ package mergesort;
 
 public class MergeParallelMain {
     public static void main(String args[]) throws InterruptedException {
-        int value=Array.getValue();
+        long startTime=System.nanoTime();
+        int value=Array.getNumberRange();//get the number range to sort the array
         Array obj = new Array(value);
         
         //take value of how many  thread to create 
@@ -15,14 +16,13 @@ public class MergeParallelMain {
         int end; 
         int start=0;
         SortingThread []t=new SortingThread[num];
-        MergingThread t2;
         
         
         //array to hold the position
         int []startPos=new int[num];
         int []endPos=new int[num];
         
-        
+             
         //first part of sort
         for(int i=0;i<num;i++){
             
@@ -51,24 +51,15 @@ public class MergeParallelMain {
         for(int i=0;i<num;i++){
             t[i].join();
         }
-        //create THREAD to merge the merge array
-        MergingThread []mergeThread;
-        int mergeArray=num-1;
-        mergeThread=new MergingThread[mergeArray];
+            
+        //merging the sorted chunk of n array
+        MergeNArray obj1=new MergeNArray(obj, endPos);
+        obj1.merge();
         
-        //merging chunkz of sorted sub arrray
-        for(int i=0;i<mergeArray;i++){
-            int mid=(startPos[i]+endPos[i])/2;
-//            System.out.println("mid : "+endPos[i]+" start :" +0+" end : "+endPos[i+1]);
-            mergeThread[i]=new MergingThread(obj,0,endPos[i],endPos[i+1]);
-            mergeThread[i].start();
-        }
-        
-        
-        for(int i=0;i<mergeArray;i++){
-            mergeThread[i].join();
-        }
         obj.display(value,0);
+        long endTime=System.nanoTime();
+        long totalTime=endTime-startTime;
+        System.out.println("\n total time : "+ totalTime);
     }
 }
         

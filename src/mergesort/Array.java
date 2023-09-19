@@ -36,7 +36,7 @@ import java.util.Scanner;
         return num;
     }
     
-    static int getValue(){
+    static int getNumberRange(){
         Scanner sc =new Scanner(System.in);
         System.out.print("Enter the range of number to sort : ");
         int value=sc.nextInt();
